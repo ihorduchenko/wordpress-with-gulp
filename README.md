@@ -1,4 +1,4 @@
-#Wordpress with Gulp
+# Wordpress with Gulp
 
 > Development of Wordpress theme using Gulp task manager
 
