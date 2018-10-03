@@ -32,3 +32,5 @@ Ihor Duchenko
 ### Version
 
 1.0.0
+
+#### Happy coding!!!
