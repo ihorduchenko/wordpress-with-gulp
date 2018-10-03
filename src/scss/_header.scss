@@ -1,0 +1,41 @@
+.site-header {
+  background-color: #fff;
+  height: 4.75rem;
+  z-index: 1030;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  transition: top 0.5s;
+  border-bottom: 1px solid #e3e3e3;
+  box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.1);
+  &.off-canvas {
+    top: -4.75rem;
+  }
+  &.fixed {
+    top: 0;
+  }
+  @media (max-width: 575.98px) {
+    .navbar-collapse {
+      position: absolute;
+      z-index: 99;
+      top: 4.125rem;
+      left: -1rem;
+      right: -1rem;
+      background-color: #fff;
+      &.show {
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
+      }
+      .nav-link {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.site-content {
+  padding-top: 4.75rem;
+}

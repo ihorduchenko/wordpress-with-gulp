@@ -1,0 +1,17 @@
+$clr-white: #ffffff;
+$clr-white-grey: #f4f4f4;
+$clr-blue: #1e58a5;
+$clr-orange: #ffb400;
+$clr-pale-orange: #f6af32;
+$clr-l-grey: #eaeaea;
+$clr-main: #666666;
+$clr-dark-blue: #2e3c43;
+$mask-blue: rgba(30, 88, 165, 0.7);
+$mask-orange: rgba(255, 180, 0, 0.7);
+
+$font-main: 'Montserrat', sans-serif;
+$font-second: 'Josefin Sans', sans-serif;
+
+@mixin trans {
+  transition: all .5s ease;
+}

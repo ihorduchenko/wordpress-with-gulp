@@ -1,0 +1,438 @@
+//Banner
+.banner-inner {
+  padding: 150px 15px;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  strong {
+    font-size: 20px;
+  }
+}
+
+.banner-overlay {
+  margin-top: -70px;
+}
+
+.banner-search {
+  background: $clr-blue;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+@media (min-width: 768px) {
+  .banner-search {
+    > span {
+      padding-right: 15px;
+      width: 135px;
+    }
+    &--form {
+      width: calc(100% - 135px);
+      select {
+        width: calc(50% - 75px);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-search {
+    padding: 25px;
+  }
+
+  .banner-inner {
+    padding: 225px 15px;
+    strong {
+      font-size: 30px;
+    }
+  }
+
+  .banner-overlay {
+      margin-top: -90px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .banner-overlay {
+      margin-top: -130px;
+    }
+}
+
+@media (max-width: 767px) {
+  .banner-search, .banner-search--form {
+    flex-direction: column;
+  }
+  .banner-search > span {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+//Actions
+.start-actions--col {
+  height: 100%;
+}
+
+.start-actions--col-overlay {
+  padding: 100px 15%;
+  height: 100%;
+  p {
+    margin-bottom: 20px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  a {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .start-actions--col-overlay {
+    padding: 150px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .start-actions--col-overlay {
+    padding: 150px 30%;
+  }
+}
+
+//Testimonials
+.testimonials {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .testimonial-slide {
+    &--content {
+      width: 55%;
+    }
+
+    &--img {
+      width: 45%;
+    }
+  }
+}
+
+//Register now
+.register-now {
+  &--overlay {
+    height: 100%;
+    padding-top: 60px;
+  }
+  &--container {
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//Video block
+.video-block {
+  -webkit-background-size: 100% 300px;
+  background-size: 100% 300px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  h3 {
+    margin-bottom: 35px;
+  }
+}
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .play-btn {
+    cursor: pointer;
+    position: absolute;
+    width: 110px;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//Statistics
+.statistics {
+  &-overlay {
+    padding: 50px 0;
+  }
+  &-col {
+    font-weight: 600;
+    .h1 {
+      font-family: $font-main;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .statistics {
+    &-overlay {
+      padding: 130px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .statistics-col {
+    margin-bottom: 50px;
+  }
+}
+
+//Feedback
+.feedback {
+  padding: 50px 0;
+  &-col {
+    &--inner {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: url(../img/dotted-bg.png);
+      padding: 70px 30px 20px;
+      &-text {
+        font-weight: 300;
+        margin-bottom: 80px;
+      }
+    }
+    &--img {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+    &--bottom {
+      margin: auto -30px -20px;
+      background: $clr-blue;
+      position: relative;
+      padding: 75px 15px 20px;
+      .person {
+        width: 100px;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .feedback {
+    padding: 70px 0;
+    &-col {
+      &--inner {
+        &-text {
+          font-size: 18px;
+          font-weight: 300;
+          height: 198.4px;
+          overflow: hidden;
+        }
+      }
+      &--bottom {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .feedback {
+    &-col {
+      &--inner {
+        &-text {
+          height: 124px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .feedback {
+    &-col {
+      &--inner {
+        &-text {
+          height: 148.8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .feedback {
+    &-col {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+//Whitepaper
+.whitepaper {
+  &-overlay {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .whitepaper {
+    &-text {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//Twitter
+.tweets {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background: $clr-white-grey;
+}
+
+.tweet {
+  margin-bottom: 30px;
+  &-row {
+    box-shadow: 0px 0px 10px 0px rgba(102,102,102,0.4);
+    height: 100%;
+  }
+  &-icon {
+    width: 70px;
+    padding: 15px 15px;
+    background: $clr-blue;
+    .icon {
+      font-size: 40px;
+      color: $clr-white;
+    }
+  }
+  &-inner {
+    background: $clr-white;
+    width: calc(100% - 70px);
+    padding: 15px;
+    p {
+      font-size: 12px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+  }
+  &-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: $clr-blue;
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .tweets {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .tweet {
+    &-inner {
+      p {
+        font-size: 14px;
+      }
+    }
+    &-date {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .tweet {
+    &-icon {
+      padding: 30px 15px;
+      background: $clr-blue;
+      .icon {
+        font-size: 40px;
+        color: $clr-white;
+      }
+    }
+    &-inner {
+      padding: 30px 40px 15px;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .tweet {
+    &-inner {
+      h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+      }
+    }
+  }
+}
+
+//National leader
+.national {
+  padding: 50px 0;
+}
+
+@media (min-width: 768) {
+  .national {
+    padding: 60px 0 75px;
+  }
+}
+
+//Partners
+.partners {
+  padding: 50px 0 35px;
+  &-row {
+    .col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .partners {
+    &-row {
+      .col {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .partners {
+    &-row {
+      .col {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}

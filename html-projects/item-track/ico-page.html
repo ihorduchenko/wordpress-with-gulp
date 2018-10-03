@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>ICOtraq</title>
+    <!--Google Recaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--Modern viewport meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic"
+          rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
+    <!--Charts CSS-->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+
+    <!--Custom CSS -->
+    <link href="styles/vendors.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Site-wrapper -->
+<div class="site-wrapper">
+
+<header class="site-header" role="banner">
+    <div class="container-fluid">
+        <div class="header-wrapper row">
+
+            <div class="header-title col-md-3 df flex-row flex-md-column align-items-center align-items-md-start">
+                <h1 class="header-pseudo-logo"><a href="index.html">Items track</a></h1>
+                <!--<p class="header-disclaimer hidden-sm-down admin-hidden">Put your item here</p>-->
+                <p class="header-disclaimer"><a href="admin-page.html">Admin mode</a></p>
+            </div>
+
+            <nav class="header-nav-wrapper col-md-9">
+                <ul class="header-nav h-100 justify-content-between justify-content-md-end align-items-end align-items-md-center">
+                    <li class="header-nav_item blog-anchor"><a href="#">Blog</a></li>
+                    <li class="header-nav_item contact-anchor"><a href="contact-page.html">Contact Us</a></li>
+                    <li class="header-nav_item add-ico-anchor admin-hidden"><a href="add-ico-page.html">Add Item</a></li>
+                    <li class="header-nav_item add-ico-anchor admin-visible"><a href="#">Log out</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+</header>
+<!-- THE site-content -->
+<div class="site-content">
+    <div class="ico-page padding-page">
+        <div class="container">
+            <div class="ico-wrapper border-wrap">
+                <section class="ico-top-section row">
+
+                    <div class="ico-publication-date col-12 hidden-md-up text-right">2 days ago</div>
+
+                    <div class="col-md-7 col-xl-6">
+
+                        <div class="ico-description row no-gutters">
+                            <div class="ico-logo col">
+                                <img class="w-100 h-100" src="images/ico-00.png" alt="ICOtraq">
+                            </div>
+                            <div class="ico-actions col df flex-column">
+                                <div class="ico-top">
+                                    <span class="badge s-active">Active</span>
+                                    <h3 class="ico-title d-inline-flex">Blockpool</h3>
+                                </div>
+                                <p class="ico-short-descr">B2B Blockchain Services Provider</p>
+                                <div class="ico-links row no-gutters hidden-sm-down">
+                                    <a href="#" class="ico-link aqua col-6 col-xl-5">Check the website</a>
+                                    <a href="#" class="ico-link aqua col-6 col-xl-5">Download the whitepaper</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="ico-extend-descr">
+                            BLOCKPOOL is a pool of blockchain based solutions for multiple business verticals.
+                            We deliver real world B2B solutions for a diverse portfolio of clients including
+                            but not limited to: Arts & Media, Fintech, Brands, Music & Sports applications
+                        </p>
+
+                        <div class="ico-links row no-gutters hidden-md-up">
+                            <a href="#" class="ico-link aqua col-6">Check the website</a>
+                            <a href="#" class="ico-link aqua col-6">Download the whitepaper</a>
+                        </div>
+
+                        <div class="ico-share">
+                            <span class="ico-share-title">Share:</span>
+                            <div class="share-button">
+                                <a href="#" class="w-100 h-100 d-inline-block" title="Facebook">
+                                    <img class="w-100 h-100 d-inline-block" src="images/btn-facebook.png" alt="Facebook">
+                                </a>
+                            </div>
+                            <div class="share-button">
+                                <a href="#" class="w-100 h-100 d-inline-block" title="Reddit">
+                                    <img class="w-100 h-100 d-inline-block" src="images/btn-reddit.png" alt="Reddit">
+                                </a>
+                            </div>
+                            <div class="share-button">
+                                <a href="#" class="w-100 h-100 d-inline-block" title="LinkedIn">
+                                    <img class="w-100 h-100 d-inline-block" src="images/btn-linkedin.png" alt="Linkedin">
+                                </a>
+                            </div>
+                            <div class="share-button">
+                                <a href="#" class="w-100 h-100 d-inline-block" title="Twitter">
+                                    <img class="w-100 h-100 d-inline-block" src="images/btn-twitter.png" alt="Twitter">
+                                </a>
+                            </div>
+                            <div class="share-button">
+                                <a href="#" class="w-100 h-100 d-inline-block" title="Google+">
+                                    <img class="w-100 h-100 d-inline-block" src="images/btn-google-plus.png" alt="Google+">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 push-md-1 col-xl-4 push-xl-2">
+
+                        <div class="ico-current">
+                            <span class="ico-current-title">Current</span><span class="ico-current-updates c-bright">(last update 3 mins ago)</span>
+                            <div class="ico-current-money row no-gutters">
+                                <div class="money-amount col">$12,000</div>
+                                <div class="money-progress col text-right">95%</div>
+                            </div>
+                            <div class="ico-current_progress progress">
+                                <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="money-progress-total text-center">$12,000 of $13,000 goal</div>
+                        </div>
+
+                        <div class="ico-trending">
+                            <span class="ico-trending-title">Trending toward*</span>
+                            <div class="ico-trending-money row no-gutters">
+                                <div class="money-amount col">$15,000</div>
+                                <div class="money-progress col text-right">110%</div>
+                            </div>
+                            <div class="ico-trending-progress progress">
+                                <div class="progress-bar neon" role="progressbar" style="width: 60%" aria-valuenow="60"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="ico-trending-comment c-bright">*trends are not projections</div>
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="ico-control-nav row">
+                    <ul class="nav nav-tabs col-12 df justify-content-between justify-content-md-start"
+                        role="tablist">
+
+                        <li class="nav-item ico-control-item df">
+                            <a class="nav-link ico-control-link link active c-bright" data-toggle="tab" href="#funding-progress"
+                               role="tab">Funding progress</a>
+                        </li>
+
+                        <li class="nav-item ico-control-item df">
+                            <a class="nav-link ico-control-link link c-bright" data-toggle="tab" href="#daily-data"
+                               role="tab">Daily data</a>
+                        </li>
+
+                        <li class="nav-item ico-control-item df">
+                            <a class="nav-link ico-control-link link c-bright" data-toggle="tab" href="#exp-projection"
+                               role="tab">[Exp] Projection</a>
+                        </li>
+
+                        <li class="nav-item ico-control-item df">
+                            <a class="nav-link ico-control-link link c-bright" data-toggle="tab" href="#exp-daily"
+                               role="tab">[Exp] Trend</a>
+                        </li>
+
+                    </ul>
+                </section>
+                <section class="ico-bottom">
+                    <div class="chart-list_wrapper tab-content">
+
+                        <div class="tab-pane active" id="funding-progress" role="tabpanel">
+                            <div class="row">
+                                <div class="col ico-chart-block">
+                                    <div id="chartdiv"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="daily-data" role="tabpanel">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Page2</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="exp-projection" role="tabpanel">
+                            <div class="row">
+                                <div class="col">
+                                    <h3>Page3</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="exp-daily" role="tabpanel">
+                            <div class="row">
+                                <div class="col">
+                                    <h4>Page4</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END site-content -->
+        <footer class="site-footer" role="contentinfo"></footer>
+    </div>
+    <!-- END site-wrapper -->
+
+        <!-- jQuery & Tether -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+        <!--Chart Resources -->
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+        <!--Custom scripts-->
+        <script src="scripts/vendors.min.js"></script>
+        <script src="scripts/index.min.js"></script>
+
+    </body>
+</html>

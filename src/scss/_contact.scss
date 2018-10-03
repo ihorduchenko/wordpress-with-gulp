@@ -1,0 +1,68 @@
+.contact-text {
+  text-align: center;
+  margin-bottom: 4.25rem;
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+.contact-socials {
+  color: #979797;
+  a {
+    color: #979797;
+    display: inline-block;
+    font-size: 2.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-input {
+  padding-left: 1.5rem;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 0.875rem;
+  background-color: transparent;
+  height: 4rem;
+  font-family: "Josefin Sans", "Montserrat", sans-serif;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+textarea.form-input {
+  height: 200px;
+  resize: none;
+}
+
+div.wpcf7-response-output {
+  margin: 2rem 0 1rem;
+  border: none;
+  padding: 0;
+  text-align: center;
+  &.wpcf7-mail-sent-ng,
+  &.wpcf7-aborted {
+    color: #dc3545;
+  }
+  &.wpcf7-validation-errors,
+  &.wpcf7-acceptance-missing {
+    color: #ffc107;
+  }
+  &.wpcf7-mail-sent-ok {
+    color: #28a745;
+  }
+}
+
+span.wpcf7-not-valid-tip {
+  font-size: 0.75rem;
+  padding-top: 0.25rem;
+  color: #dc3545;
+}

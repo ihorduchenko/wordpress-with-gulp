@@ -1,0 +1,39 @@
+.site-btn {
+  display: inline-block;
+  font-size: 0.875rem;
+  min-width: 9rem;
+  text-align: center;
+  padding: 1rem 0.75rem;
+  position: relative;
+  color: #fff;
+  border: none;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.sb-small {
+  padding: 0.5rem 0.25rem;
+  min-width: 7rem;
+}
+
+.sb-light {
+  background-color: #fff;
+  color: #000000;
+  &:hover {
+    background-color: #fff;
+    color: #000000;
+  }
+}
+
+a.site-btn {
+  text-decoration: none;
+}
+
+.site-btn.btn-fade {
+  background-color: #979797;
+  cursor: not-allowed;
+}
+
+.site-btn:hover {
+  color: #fff;
+}

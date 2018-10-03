@@ -1,0 +1,21 @@
+//Global things
+@import "base/normalize";
+@import "base/reset";
+
+//Bootstrap
+@import "bootstrap/bootstrap-grid";
+
+//Basic configuration
+@import "base/variables";
+@import "base/base";
+
+//Parts
+@import "parts/typography";
+@import "parts/nav";
+@import "parts/footer";
+@import "parts/btn";
+@import "parts/forms";
+@import "parts/carousel";
+@import "parts/general";
+
+//Pages

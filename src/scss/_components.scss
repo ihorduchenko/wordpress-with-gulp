@@ -1,0 +1,95 @@
+
+.section-title {
+  font-size: 4rem;
+}
+
+.section-title span {
+  color: #979797;
+}
+
+.element {
+  margin-bottom: 100px;
+}
+
+.element:last-child {
+  margin-bottom: 0;
+}
+
+.intro-section {
+  padding: 7rem 0;
+}
+
+.icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  .icon {
+    img {
+      width: 70px;
+      max-width: 70px;
+      @media (min-width: 1200px) {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: all 0.5s ease;
+      }
+    }
+    h2 {
+      font-size: 4rem;
+    }
+  }
+  .icon-box-content {
+    padding-left: 1.5rem;
+    padding-top: 0.875rem;
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+  &:hover img {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+}
+
+.pic-frame {
+  position: relative;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.pic-frame:after {
+  position: absolute;
+  content: "";
+  width: calc(100% - 1.5rem);
+  height: calc(100% - 1.5rem);
+  bottom: 0;
+  left: 0;
+  border: 2px solid #000;
+  z-index: 1;
+}
+
+.milestone {
+  margin-top: 15px;
+}
+
+.milestone h2 {
+  font-size: 4rem;
+}
+
+.milestone h2 span {
+  font-size: 1.125rem;
+  color: #979797;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}

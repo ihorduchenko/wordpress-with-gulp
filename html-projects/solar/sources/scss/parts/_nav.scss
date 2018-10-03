@@ -1,0 +1,369 @@
+header {
+  @include trans;
+  position: fixed;
+  z-index: 3;
+  height: 70px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  &.fix-bg {
+    background-color: $clr-blue;
+  }
+}
+
+header.nav-is-visible {
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+}
+
+header::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  display: none;
+  content: 'mobile';
+}
+
+.header-logo {
+  padding-top: 13px;
+  display: inline-block;
+  height: 100%;
+  margin-left: 15px;
+  /* remove jump on iOS devices - when we fire the navigation */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.header-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 40px;
+}
+
+.header-nav--trigger {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  /* hide text */
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+}
+
+.header-nav--trigger span {
+  /* hamburger icon created in CSS */
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
+  -webkit-transition: background-color 0.3s 0.3s;
+  -moz-transition: background-color 0.3s 0.3s;
+  transition: background-color 0.3s 0.3s;
+  background-color: #ffffff;
+}
+
+.header-nav--trigger span::before, .header-nav--trigger span::after {
+  /* upper and lower lines of the menu icon */
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s 0.3s;
+  -moz-transition: -moz-transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
+}
+
+.header-nav--trigger span::before {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  -o-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.header-nav--trigger span::after {
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  -o-transform: translateY(6px);
+  transform: translateY(6px);
+}
+
+.nav-is-visible .header-nav--trigger span {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.nav-is-visible .header-nav--trigger span::before {
+  -webkit-transform: translateY(0) rotate(-45deg);
+  -moz-transform: translateY(0) rotate(-45deg);
+  -ms-transform: translateY(0) rotate(-45deg);
+  -o-transform: translateY(0) rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
+}
+
+.nav-is-visible .header-nav--trigger span::after {
+  -webkit-transform: translateY(0) rotate(45deg);
+  -moz-transform: translateY(0) rotate(45deg);
+  -ms-transform: translateY(0) rotate(45deg);
+  -o-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
+}
+
+.header-nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  background: $clr-blue;
+  -webkit-transition: visibility 0s 0.3s;
+  -moz-transition: visibility 0s 0.3s;
+  transition: visibility 0s 0.3s;
+}
+
+.header-nav a {
+  text-transform: uppercase;
+  display: block;
+  padding: 15px;
+  color: #ffffff;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.header-nav.nav-is-visible {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  -moz-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+
+.site-main::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  display: none;
+  content: 'mobile';
+}
+
+.site-main {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  @include trans;
+}
+
+.site-main.nav-is-visible {
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+}
+
+@media (min-width: 1024px) {
+  .site-main::before {
+    content: 'desktop';
+  }
+  .header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .header-nav {
+    position: static;
+    visibility: visible;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    overflow-y: hidden;
+    background: transparent;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .header-nav--wrapper {
+    /* padding left = logo size + logo left position*/
+    padding: 0 15px 0 135px;
+  }
+  .header-nav li {
+    display: inline-block;
+    height: 100%;
+  }
+  .header-nav li + li {
+    margin-left: 10px;
+  }
+  .header-nav li a {
+    padding: 20px 0;
+    line-height: 20px;
+    font-size: 14px;
+    border-bottom: none;
+    /* Prevent .header-subnav--trigger flicker is Safari */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+  .header-nav li a:hover {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: .6;
+  }
+  .header-nav .go-back {
+    display: none;
+  }
+  .site-main.nav-is-visible {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .header-nav--trigger {
+    display: none;
+  }
+  header {
+    height: 90px;
+  }
+  header.nav-is-visible {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  header::before {
+    content: 'desktop';
+  }
+  .header-logo {
+    position: absolute;
+    z-index: 2;
+    margin-left: 15px;
+    padding-top: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .header-logo img {
+    max-height: none;
+    width: 150px;
+  }
+  .header-btns {
+    flex-direction: row !important;
+    align-items: center;
+    height: 60px;
+  }
+  .header-btns a {
+    font-size: 14px;
+    &:first-child {
+      transform: translateY(3px);
+    }
+  }
+  .header-btns a + a {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 1600px) {
+  header {
+    height: 130px;
+  }
+  .header-nav--wrapper {
+    padding: 0 150px 0 400px;
+  }
+  .header-nav li + li {
+    margin-left: 15px;
+  }
+  .header-nav li a {
+    padding: 20px 0;
+    line-height: 1;
+    font-size: 20px;
+  }
+  .header-logo {
+    margin-left: 200px;
+    height: 80px;
+  }
+  .header-logo img {
+    width: 225px;
+  }
+  .header-nav {
+    height: 80px;
+    line-height: 80px;
+  }
+  .header-btns {
+    height: 80px;
+  }
+  .header-btns a + a {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .header-nav--wrapper {
+    padding: 0 200px 0 450px;
+  }
+  .header-btns a + a {
+    margin-left: 20px;
+  }
+  .header-nav li + li {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-btns .btn {
+    border: none;
+    font-size: 20px;
+    line-height: 1.4;
+    border-bottom: 1px solid #33414a;
+    padding: 15px;
+    text-align: left;
+    height: auto;
+  }
+  .header-menu, .header-btns {
+    width: 100%;
+  }
+  .header-nav a {
+    font-size: 20px;
+    border-bottom: 1px solid #33414a;
+  }
+}

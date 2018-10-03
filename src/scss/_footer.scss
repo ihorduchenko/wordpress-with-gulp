@@ -1,0 +1,27 @@
+.footer-section {
+  padding: 7rem 0;
+  .copyright {
+    font-size: 0.75rem;
+    color: #979797;
+    a {
+      color: #979797;
+    }
+  }
+}
+
+.social-links {
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+  color: #979797;
+  a {
+    color: #979797;
+    font-size: 1rem;
+    margin-right: 1.75rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: #000000;
+    }
+  }
+}

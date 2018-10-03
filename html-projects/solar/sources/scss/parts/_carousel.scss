@@ -1,0 +1,120 @@
+.sol-carousel {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  &--control {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      .icon {
+        color: $clr-dark-blue;
+      }
+    }
+    .icon {
+      color: $clr-l-grey;
+      @include trans;
+    }
+    &.mod-prev {
+      left: -15px;
+    }
+    &.mod-next {
+      right: -15px;
+    }
+  }
+  &--pagination {
+    padding-top: 30px;
+    position: relative;
+    span {
+      opacity: 1;
+      width: 40px;
+      height: 3px;
+      background: $clr-l-grey;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-radius: 0;
+      &[class$="-active"] {
+        background: $clr-dark-blue;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .sol-carousel {
+    &--control {
+      font-size: 40px;
+      &.mod-prev {
+        left: -40px;
+      }
+      &.mod-next {
+        right: -40px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 620px) {
+  .sol-carousel {
+    &--control {
+      &.mod-prev {
+        left: -18px;
+      }
+      &.mod-next {
+        right: -18px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .sol-carousel {
+    &--control {
+      &.mod-prev {
+        left: -30px;
+      }
+      &.mod-next {
+        right: -30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .sol-carousel {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sol-carousel {
+    &--control {
+      &.mod-prev {
+        left: -50px;
+      }
+      &.mod-next {
+        right: -50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .testimonials-carousel {
+    &--control {
+      &.mod-prev {
+        left: -70px;
+      }
+      &.mod-next {
+        right: -70px;
+      }
+    }
+  }
+}

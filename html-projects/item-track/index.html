@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>ICOtraq</title>
+    <!--Google Recaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--Modern viewport meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic"
+          rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
+    <!--Charts CSS-->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+
+    <!--Custom CSS -->
+    <link href="styles/vendors.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Site-wrapper -->
+<div class="site-wrapper">
+
+<header class="site-header" role="banner">
+    <div class="container-fluid">
+        <div class="header-wrapper row">
+
+            <div class="header-title col-md-3 df flex-row flex-md-column align-items-center align-items-md-start">
+                <h1 class="header-pseudo-logo"><a href="index.html">Items track</a></h1>
+                <!--<p class="header-disclaimer hidden-sm-down admin-hidden">Put your item here</p>-->
+                <p class="header-disclaimer"><a href="admin-page.html">Admin mode</a></p>
+            </div>
+
+            <nav class="header-nav-wrapper col-md-9">
+                <ul class="header-nav h-100 justify-content-between justify-content-md-end align-items-end align-items-md-center">
+                    <li class="header-nav_item blog-anchor"><a href="#">Blog</a></li>
+                    <li class="header-nav_item contact-anchor"><a href="contact-page.html">Contact Us</a></li>
+                    <li class="header-nav_item add-ico-anchor admin-hidden"><a href="add-ico-page.html">Add Item</a></li>
+                    <li class="header-nav_item add-ico-anchor admin-visible"><a href="#">Log out</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+</header>
+<!-- THE site-content -->
+<div class="site-content">
+    <div class="home-page">
+
+        <section class="home-filter">
+            <div class="container">
+                <div class="row">
+
+                    <ul class="nav nav-tabs col df justify-content-between justify-content-md-start" role="tablist">
+                        <li class="nav-item home-filter_item">
+                            <a class="nav-link home-filter_link c-bright active" data-toggle="tab" href="#current" role="tab">Current</a>
+                        </li>
+                        <li class="nav-item home-filter_item">
+                            <a class="nav-link home-filter_link c-bright" data-toggle="tab" href="#upcoming" role="tab">Upcoming</a>
+                        </li>
+                        <li class="nav-item home-filter_item">
+                            <a class="nav-link home-filter_link c-bright" data-toggle="tab" href="#finished" role="tab">Finished</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="home-list">
+            <div class="container">
+
+                <div class="home-list_wrapper tab-content">
+                    <div class="tab-pane active" id="current" role="tabpanel">
+                        <div class="row">
+                            <!--1st ROW-->
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">1 hour to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-00.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">Blockpool</h3>
+                                            <p class="list-item_text">
+                                                B2B Blockchain Services Provider
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">13 hours to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-01.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">OnPlace Inc.</h3>
+                                            <p class="list-item_text">
+                                                Invest in private companies through OPL Tokens
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">23 hour to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-02.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">Orocrypt</h3>
+                                            <p class="list-item_text">
+                                                Digitized Precious Metals On The Ethereum Blockchain
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!--2nd ROW-->
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">1 day to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-03.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">True Flip</h3>
+                                            <p class="list-item_text">
+                                                Worldwide Blockchain Lottery
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">2 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-04.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">SkinCoin</h3>
+                                            <p class="list-item_text">
+                                                Ethereum token for instant trading CS:GO, Dota 2 skins
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">2 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-05.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">openANX</h3>
+                                            <p class="list-item_text">
+                                                Real World Application of Decentralized Exchanges
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!--3rd ROW-->
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">2 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-06.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">SunContract</h3>
+                                            <p class="list-item_text">
+                                                An energy trading platform that utilises blockchain technology
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">3 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-07.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">Wagerr</h3>
+                                            <p class="list-item_text">
+                                                Decentralized sportsbook with bets on sports
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">3 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-08.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">Nimiq</h3>
+                                            <p class="list-item_text">
+                                                A Next-Generation Blockchain Protocol
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- 4th ROW -->
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">4 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-09.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">DAO.Casino</h3>
+                                            <p class="list-item_text">
+                                                Blockchain protocol for gambling
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">4 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-10.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">MyBit</h3>
+                                            <p class="list-item_text">
+                                                Tokenizing Smart Enegry, AI, and Ownership
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">5 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-11.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">Bowhead Health</h3>
+                                            <p class="list-item_text">
+                                                Personal health using the blockchain
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- 5th ROW -->
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">5 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-12.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">OmiseGo</h3>
+                                            <p class="list-item_text">
+                                                Lorem ipsum dolor sit amet
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">6 days to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-13.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">Bitquence</h3>
+                                            <p class="list-item_text">
+                                                Next-Generation Digital Wallet
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="list-item_wrapper col-md-6 col-lg-4">
+                                <a href="ico-page.html" class="list-item h-100 df flex-column">
+                                    <div class="list-item_date df justify-content-end">1 week to go</div>
+                                    <div class="list-item_info df">
+                                        <div class="col list-item_img d-inline-flex">
+                                            <img src="images/ico-14.png" alt="Item track">
+                                        </div>
+                                        <div class="col list-item_descr d-inline-flex flex-column">
+                                            <h3 class="list-item_title">CORION</h3>
+                                            <p class="list-item_text">
+                                                The GATEWAY to Crypto World
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="list-item_progress progress">
+                                        <div class="progress-bar aqua" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="list-item_funds text-center">
+                                        $30,000 of $150,000 goal
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="upcoming" role="tabpanel">
+                        <div class="row">
+                            <div class="col">
+                                <h2>Here must be some content</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="finished" role="tabpanel">
+                        <div class="row">
+                            <div class="col">
+                                <h3>And here also must be some content</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+</div>
+<!-- END site-content -->
+        <footer class="site-footer" role="contentinfo"></footer>
+    </div>
+    <!-- END site-wrapper -->
+
+        <!-- jQuery & Tether -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+        <!--Chart Resources -->
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+        <!--Custom scripts-->
+        <script src="scripts/vendors.min.js"></script>
+        <script src="scripts/index.min.js"></script>
+
+    </body>
+</html>

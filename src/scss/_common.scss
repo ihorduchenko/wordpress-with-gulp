@@ -1,0 +1,88 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Josefin Sans', 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #001418;
+  margin: 0;
+  font-weight: 600;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p.text,
+.text p,
+.text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #979797;
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  ul {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+hr.mod-gray {
+  border-top: 1px solid #979797;
+  opacity: 0.5;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-404 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}

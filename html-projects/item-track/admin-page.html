@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>ICOtraq</title>
+    <!--Google Recaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--Modern viewport meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic"
+          rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
+    <!--Charts CSS-->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+
+    <!--Custom CSS -->
+    <link href="styles/vendors.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Site-wrapper -->
+<div class="site-wrapper">
+
+<div class="admin-header">
+    <header class="site-header" role="banner">
+        <div class="container-fluid">
+            <div class="header-wrapper row">
+    
+                <div class="header-title col-md-3 df flex-row flex-md-column align-items-center align-items-md-start">
+                    <h1 class="header-pseudo-logo"><a href="index.html">Items track</a></h1>
+                    <!--<p class="header-disclaimer hidden-sm-down admin-hidden">Put your item here</p>-->
+                    <p class="header-disclaimer"><a href="admin-page.html">Admin mode</a></p>
+                </div>
+    
+                <nav class="header-nav-wrapper col-md-9">
+                    <ul class="header-nav h-100 justify-content-between justify-content-md-end align-items-end align-items-md-center">
+                        <li class="header-nav_item blog-anchor"><a href="#">Blog</a></li>
+                        <li class="header-nav_item contact-anchor"><a href="contact-page.html">Contact Us</a></li>
+                        <li class="header-nav_item add-ico-anchor admin-hidden"><a href="add-ico-page.html">Add Item</a></li>
+                        <li class="header-nav_item add-ico-anchor admin-visible"><a href="#">Log out</a></li>
+                    </ul>
+                </nav>
+    
+            </div>
+        </div>
+    </header>
+</div>
+<!-- THE site-content -->
+<div class="site-content">
+    <div class="admin-page padding-page">
+        <div class="container">
+            <div class="admin-board-wrapper border-wrap">
+                <h2 class="admin-page-title page-title text-center">Manage Item</h2>
+                <div class="admin-spacing">
+                    <div class="admin-top row">
+
+                        <div class="col-6 df hidden-sm-down align-items-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page_link" href="#">&lt;</a></li>
+                                    <li class="page-item"><a class="page_link active" href="#">1</a></li>
+                                    <li class="page-item"><a class="page_link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page_link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page_link" href="#">&gt;</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-6 hidden-sm-down text-right">
+                            <a href="add-ico-page.html" class="btn btn-primary ripplelink">Add Item</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="admin-table-head table-head" id="here">
+                    <div class="admin-spacing">
+                        <div class="row no-gutters">
+
+                            <div class="col-7 col-md-3 head-col bio-head-col ">
+                                <button class="sort-link ripplelink">Item title/owner/email <span class="sort-arrow sort-arrow-down"></span></button>
+                            </div>
+                            <div class="col-md-2 head-col date-head-col text-center hidden-sm-down">
+                                <button class="sort-link ripplelink">Registration Date <span class="sort-arrow sort-arrow-down"></span></button>
+                            </div>
+                            <div class="col-5 col-md-2 head-col status-head-col text-right  text-sm-center">
+                                <button class="sort-link ripplelink hidden-sm-down">Status<span class="sort-arrow sort-arrow-up"></span></button>
+                                <button class="sort-link ripplelink hidden-md-up">Reg. date/status</button>
+                            </div>
+                            <div class="col-md-3 head-col tools-head-col text-center hidden-sm-down">
+                                <button class="sort-link ripplelink">Tools</button>
+                            </div>
+                            <div class="col-md-2 head-col actions-head-col hidden-sm-down">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-table-body table-body">
+                    <!--Pending Example-->
+                    <div class="table-row white ico-pending">
+                        <div class="admin-spacing">
+                            <div class="row">
+
+                                <div class="body-col bio-body-col col-7 col-md-3 df justify-content-start flex-column">
+                                    <h3 class="bio-title">Blockpool</h3>
+                                    <p class="bio-owner c-bright">Otis Benrhard</p>
+                                    <a href="mailto:otis.bernhard@yahoo.com" class="bio-email c-bright">otis.bernhard@yahoo.com</a>
+                                </div>
+
+                                <div class="body-col date-body-col col-5 col-md-2 df align-items-start align-items-md-center justify-content-end justify-content-md-center">
+                                    <p class="date mb-0 text-center">07/26/2017</p>
+                                </div>
+
+                                <div class="body-col status-body-col col-5 push-7 col-md-2 push-md-0 df justify-content-end justify-content-md-start align-items-center">
+                                    <div class="ico-status badge s-pending">Pending</div>
+                                </div>
+
+                                <div class="body-col tools-body-col col-7 pull-5 col-md-3 pull-md-0 df align-items-center justify-content-md-center">
+                                    <a href="#here" class="tools-link remove-link" title="Remove">
+                                        <img src="images/btn-remove.png" alt="Remove">
+                                    </a>
+                                    <a href="#here" class="tools-link edit-link" title="Edit">
+                                        <img src="images/btn-edit.png" alt="Edit">
+                                    </a>
+                                    <a href="#here" class="tools-link recalculate-link" title="Recalculate">
+                                        <img src="images/btn-recalculate.png" alt="Recalculate">
+                                    </a>
+                                </div>
+
+                                <div class="body-col actions-body-col col-5 push-7 col-md-2 push-md-0 text-right df align-items-center justify-content-end">
+                                    <a href="#here" class="action-link approve-link df" title="Approve">
+                                        <img src="images/btn-approve.png" alt="Approve">
+                                    </a>
+                                    <a href="#here" class="action-link deny-link df" title="Deny">
+                                        <img src="images/btn-deny.png" alt="Deny">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Active Example-->
+                    <div class="table-row grey ico-active">
+                        <div class="admin-spacing">
+                            <div class="row">
+
+                                <div class="body-col bio-body-col col-7 col-md-3 df justify-content-start flex-column">
+                                    <h3 class="bio-title">Etherium</h3>
+                                    <p class="bio-owner c-bright">Otis Benrhard</p>
+                                    <a href="mailto:otis.bernhard@yahoo.com" class="bio-email c-bright">otis.bernhard@yahoo.com</a>
+                                </div>
+
+                                <div class="body-col date-body-col col-5 col-md-2 df align-items-start align-items-md-center justify-content-end justify-content-md-center">
+                                    <p class="date mb-0 text-center">06/26/2017</p>
+                                </div>
+
+                                <div class="body-col status-body-col col-5 push-7 col-md-2 push-md-0 df justify-content-end justify-content-md-start align-items-center">
+                                    <div class="ico-status badge s-active">Active</div>
+                                </div>
+
+                                <div class="body-col tools-body-col col-7 pull-5 col-md-3 pull-md-0 df align-items-center justify-content-md-center">
+                                    <a href="#here" class="tools-link remove-link" title="Remove">
+                                        <img src="images/btn-remove.png" alt="Remove">
+                                    </a>
+                                    <a href="#here" class="tools-link edit-link" title="Edit">
+                                        <img src="images/btn-edit.png" alt="Edit">
+                                    </a>
+                                    <a href="#here" class="tools-link recalculate-link" title="Recalculate">
+                                        <img src="images/btn-recalculate.png" alt="Recalculate">
+                                    </a>
+                                </div>
+
+                                <div class="body-col actions-body-col col-5 push-7 col-md-2 push-md-0 text-right df align-items-center justify-content-end">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Declined Example-->
+                    <div class="table-row white ico-pending">
+                        <div class="admin-spacing">
+                            <div class="row">
+
+                                <div class="body-col bio-body-col col-7 col-md-3 df justify-content-start flex-column">
+                                    <h3 class="bio-title">Lithium</h3>
+                                    <p class="bio-owner c-bright">Otis Benrhard</p>
+                                    <a href="mailto:otis.bernhard@yahoo.com" class="bio-email c-bright">otis.bernhard@yahoo.com</a>
+                                </div>
+
+                                <div class="body-col date-body-col col-5 col-md-2 df align-items-start align-items-md-center justify-content-end justify-content-md-center">
+                                    <p class="date mb-0 text-center">05/26/2017</p>
+                                </div>
+
+                                <div class="body-col status-body-col col-5 push-7 col-md-2 push-md-0 df justify-content-end justify-content-md-start align-items-center">
+                                    <div class="ico-status badge s-declined">Declined</div>
+                                </div>
+
+                                <div class="body-col tools-body-col col-7 pull-5 col-md-3 pull-md-0 df align-items-center justify-content-md-center">
+                                    <a href="#here" class="tools-link remove-link" title="Remove">
+                                        <img src="images/btn-remove.png" alt="Remove">
+                                    </a>
+                                    <a href="#here" class="tools-link edit-link" title="Edit">
+                                        <img src="images/btn-edit.png" alt="Edit">
+                                    </a>
+                                    <a href="#here" class="tools-link recalculate-link" title="Recalculate">
+                                        <img src="images/btn-recalculate.png" alt="Recalculate">
+                                    </a>
+                                </div>
+
+                                <div class="body-col actions-body-col col-5 push-7 col-md-2 push-md-0 text-right df align-items-center justify-content-end">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Upcoming Example-->
+                    <div class="table-row grey ico-active hidden-sm-down">.
+                        <div class="admin-spacing">
+                            <div class="row">
+
+                                <div class="body-col bio-body-col col-7 col-md-3 df justify-content-start flex-column">
+                                    <h3 class="bio-title">Cuprum</h3>
+                                    <p class="bio-owner c-bright">Otis Benrhard</p>
+                                    <a href="mailto:otis.bernhard@yahoo.com" class="bio-email c-bright">otis.bernhard@yahoo.com</a>
+                                </div>
+
+                                <div class="body-col date-body-col col-5 col-md-2 df align-items-start align-items-md-center justify-content-end justify-content-md-center">
+                                    <p class="date mb-0 text-center">04/26/2017</p>
+                                </div>
+
+                                <div class="body-col status-body-col col-5 push-7 col-md-2 push-md-0 df justify-content-end justify-content-md-start align-items-center">
+                                    <div class="ico-status badge s-upcoming">Upcoming</div>
+                                </div>
+
+                                <div class="body-col tools-body-col col-7 pull-5 col-md-3 pull-md-0 df align-items-center justify-content-md-center">
+                                    <a href="#here" class="tools-link remove-link" title="Remove">
+                                        <img src="images/btn-remove.png" alt="Remove">
+                                    </a>
+                                    <a href="#here" class="tools-link edit-link invisible" title="Edit">
+                                        <img src="images/btn-edit.png" alt="Edit">
+                                    </a>
+                                    <a href="#here" class="tools-link recalculate-link invisible" title="Recalculate">
+                                        <img src="images/btn-recalculate.png" alt="Recalculate">
+                                    </a>
+                                </div>
+
+                                <div class="body-col actions-body-col col-5 push-7 col-md-2 push-md-0 text-right df align-items-center justify-content-end">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Finished Example-->
+                    <div class="table-row white ico-pending hidden-sm-down">
+                        <div class="admin-spacing">
+                            <div class="row">
+
+                                <div class="body-col bio-body-col col-7 col-md-3 df justify-content-start flex-column">
+                                    <h3 class="bio-title">Hydra</h3>
+                                    <p class="bio-owner c-bright">Otis Benrhard</p>
+                                    <a href="mailto:otis.bernhard@yahoo.com" class="bio-email c-bright">otis.bernhard@yahoo.com</a>
+                                </div>
+
+                                <div class="body-col date-body-col col-5 col-md-2 df align-items-start align-items-md-center justify-content-end justify-content-md-center">
+                                    <p class="date mb-0 text-center">03/26/2017</p>
+                                </div>
+
+                                <div class="body-col status-body-col col-5 push-7 col-md-2 push-md-0 df justify-content-end justify-content-md-start align-items-center">
+                                    <div class="ico-status badge s-finished">Finished</div>
+                                </div>
+
+                                <div class="body-col tools-body-col col-7 pull-5 col-md-3 pull-md-0 df align-items-center justify-content-md-center">
+                                    <a href="#here" class="tools-link remove-link" title="Remove">
+                                        <img src="images/btn-remove.png" alt="Remove">
+                                    </a>
+                                    <a href="#here" class="tools-link edit-link invisible" title="Edit">
+                                        <img src="images/btn-edit.png" alt="Edit">
+                                    </a>
+                                    <a href="#here" class="tools-link recalculate-link invisible" title="Recalculate" style="visibility: hidden">
+                                        <img src="images/btn-recalculate.png" alt="Recalculate">
+                                    </a>
+                                </div>
+
+                                <div class="body-col actions-body-col col-5 push-7 col-md-2 push-md-0 text-right df align-items-center justify-content-end">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END site-content -->
+        <footer class="site-footer" role="contentinfo"></footer>
+    </div>
+    <!-- END site-wrapper -->
+
+        <!-- jQuery & Tether -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+        <!--Chart Resources -->
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+        <!--Custom scripts-->
+        <script src="scripts/vendors.min.js"></script>
+        <script src="scripts/index.min.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,49 @@
+.insta-col{
+  &--bg {
+    position: relative;
+    display: block;
+    padding-bottom: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  &--overlay {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+  }
+  &--location {
+    padding: 15% 0.675rem 0;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+  }
+  &--info,
+  &--reacts {
+    padding: 1.125rem 0.675rem 0.675rem;
+    transition: all 0.3s ease;
+  }
+  &--info {
+    font-family: 'Montserrat', sans-serif;
+  }
+  &--reacts {
+    font-size: 1.125rem;
+  }
+  &:hover {
+    .insta-col--overlay {
+      opacity: 1;
+    }
+    .insta-col--location {
+      padding-top: 10%;
+    }
+    .insta-col--info,
+    .insta-col--reacts {
+      padding-top: 0.675rem;
+    }
+  }
+}

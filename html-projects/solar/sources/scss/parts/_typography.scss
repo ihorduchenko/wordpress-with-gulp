@@ -1,0 +1,67 @@
+h1, .h1 {
+  font-size: 30px;
+}
+
+h2, .h2 {
+  font-size: 24px;
+}
+
+h3, .h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+h4, .h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h1, .h1, h2, .h2 {
+  font-family: $font-second;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mod-upper {
+  text-transform: uppercase;
+}
+
+.mod-italic {
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+blockquote {
+  p {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .caption {
+    font-size: 16px;
+    strong {
+      font-weight: 700;
+      color: $clr-dark-blue;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  h1, .h1 {
+    font-size: 60px;
+  }
+  h2, .h2 {
+    font-size: 40px;
+  }
+  h3, .h3 {
+    font-size: 36px;
+  }
+}

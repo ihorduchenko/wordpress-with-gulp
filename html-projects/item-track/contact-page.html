@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>ICOtraq</title>
+    <!--Google Recaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--Modern viewport meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic"
+          rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
+    <!--Charts CSS-->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+
+    <!--Custom CSS -->
+    <link href="styles/vendors.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Site-wrapper -->
+<div class="site-wrapper">
+
+<div class="contact-header">
+    <header class="site-header" role="banner">
+        <div class="container-fluid">
+            <div class="header-wrapper row">
+    
+                <div class="header-title col-md-3 df flex-row flex-md-column align-items-center align-items-md-start">
+                    <h1 class="header-pseudo-logo"><a href="index.html">Items track</a></h1>
+                    <!--<p class="header-disclaimer hidden-sm-down admin-hidden">Put your item here</p>-->
+                    <p class="header-disclaimer"><a href="admin-page.html">Admin mode</a></p>
+                </div>
+    
+                <nav class="header-nav-wrapper col-md-9">
+                    <ul class="header-nav h-100 justify-content-between justify-content-md-end align-items-end align-items-md-center">
+                        <li class="header-nav_item blog-anchor"><a href="#">Blog</a></li>
+                        <li class="header-nav_item contact-anchor"><a href="contact-page.html">Contact Us</a></li>
+                        <li class="header-nav_item add-ico-anchor admin-hidden"><a href="add-ico-page.html">Add Item</a></li>
+                        <li class="header-nav_item add-ico-anchor admin-visible"><a href="#">Log out</a></li>
+                    </ul>
+                </nav>
+    
+            </div>
+        </div>
+    </header>
+</div>
+<!-- THE site-content -->
+<div class="site-content">
+    <div class="contact-page padding-page">
+        <div class="container">
+            <form id="contact-form">
+                <div class="contact-form-wrapper border-wrap">
+                    <h2 class="contact-page-title page-title text-center hidden-sm-down">Contact Us</h2>
+                    <div class="row">
+
+                        <div class="col-md-8 push-md-2 col-xl-6 push-xl-3">
+
+                            <div class="input-wrapper">
+                                <div class="input-group">
+                                    <input id="name" class="input-field" type="text">
+                                    <label for="name">Enter your name</label>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="input-group">
+                                    <input id="email" class="input-field" type="text">
+                                    <label for="email">Your contact email</label>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="input-group">
+                                    <input id="subject" class="input-field" type="text">
+                                    <label for="subject">Subject of the message</label>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+
+                            <div class="textarea-wrapper w-100">
+                                <textarea id="ico-textarea" class="h-100 w-100"
+                                          placeholder="Enter description of your Item"></textarea>
+                            </div>
+                            
+                            <div class="contact-page-bottom row no-gutters">
+
+                                <div class="col-sm-8 df justify-content-sm-start">
+                                    <div class="g-recaptcha"
+                                         data-sitekey="6Lf6LikUAAAAADTFeBD2Rf_sVaL-4jIBRJU90fei">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="contact-button-wrapper df  justify-content-end justify-content-sm-start w-100">
+                                        <button type="submit" class="btn btn-primary ripplelink">Submit Item</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- END site-content -->
+        <footer class="site-footer" role="contentinfo"></footer>
+    </div>
+    <!-- END site-wrapper -->
+
+        <!-- jQuery & Tether -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+        <!--Chart Resources -->
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+        <!--Custom scripts-->
+        <script src="scripts/vendors.min.js"></script>
+        <script src="scripts/index.min.js"></script>
+
+    </body>
+</html>

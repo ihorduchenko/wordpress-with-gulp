@@ -1,0 +1,17 @@
+select {
+  border: none;
+  outline: none;
+  height: 45px;
+  padding: 9px 15px;
+  color: $clr-main;
+  font-size: 18px;
+  line-height: 1;
+  background: url(../img/chevron-down.png) no-repeat 93% center  $clr-white;
+  -webkit-background-size: 14px;
+  background-size: 14px;
+  -webkit-appearance: none;
+}
+option:hover {
+  background: $clr-blue;
+  box-shadow: 0 0 10px 100px $clr-blue inset;
+}

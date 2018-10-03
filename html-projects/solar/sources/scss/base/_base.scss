@@ -1,0 +1,107 @@
+html, body {
+  font-family: $font-main;
+  font-size: 20px;
+  line-height: 1.4;
+  color: $clr-main;
+}
+
+@media (max-width: 767px) {
+  html, body {
+    font-size: 16px;
+  }
+}
+
+.opaque {
+  opacity: 0.3;
+}
+
+.clr-white {
+  color: $clr-white;
+}
+
+.clr-orange {
+  color: $clr-orange;
+}
+
+.clr-blue {
+  color: $clr-blue;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.bg-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &.mod-top {
+    background-position: center top;
+  }
+}
+
+.bg-overlay {
+  height: 100%;
+  &.mod-orange {
+    background: $mask-orange;
+  }
+  &.mod-blue {
+    background: $mask-blue;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $clr-blue;
+  @include trans;
+  text-decoration: none;
+  &:visited, &:link, &:hover {
+    outline: none;
+  }
+}
+
+p.mod-big {
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.banner {
+  padding-top: 70px;
+}
+
+.container {
+  &.mod-narrow {
+    max-width: 810px;
+  }
+  &.mod-text {
+    max-width: 555px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    padding-top: 90px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .banner {
+    padding-top: 130px;
+  }
+}
+

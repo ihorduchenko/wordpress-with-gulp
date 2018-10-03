@@ -1,0 +1,19 @@
+{
+  "name": "gulp-for-wordpress",
+  "version": "1.0.0",
+  "description": "Develop your Wordpress theme using Gulp",
+  "homepage": "http://ihorduchenko.cloudaccess.host",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11"
+  }
+}

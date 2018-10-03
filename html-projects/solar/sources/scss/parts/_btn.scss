@@ -1,0 +1,40 @@
+.btn {
+  text-transform: uppercase;
+  @include trans;
+  display: inline-block;
+  min-width: 150px;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  text-decoration: none;
+  position: relative;
+  outline: none;
+  border: 1px solid $clr-white;
+  color: $clr-white;
+  background-color: transparent;
+  height: 45px;
+  &:hover {
+    background-color: $clr-white;
+    color: $clr-blue;
+  }
+  &.mod-orange {
+    border: 1px solid $clr-pale-orange;
+    background-color: $clr-pale-orange;
+    &:hover {
+      border: 1px solid $clr-orange;
+      background-color: $clr-orange;
+      color: $clr-white
+    }
+  }
+}
