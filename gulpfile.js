@@ -31,6 +31,7 @@ gulp.task('styles', function () {
       this.emit('end');
     }
   }))
+  .pipe(sourceMaps.init())
   .pipe(sass({errLogToConsole: true, outputStyle: 'compressed'}))
   .pipe(autoprefixer({
     browsers: ['last 7 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
